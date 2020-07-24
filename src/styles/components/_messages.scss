@@ -1,0 +1,51 @@
+.messages-list {
+  width: 100%;
+  padding: 1.5em 0;
+  margin: 0 auto;
+  flex-grow: 1;
+  overflow-y: visible;
+}
+
+.messages-message {
+  display: flex;
+  margin-top: 0.625em;
+  &.currentMember {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  & > .avatar {
+    width: 2.19em;
+    height: 2.19em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0.625em -0.625em;
+  }
+}
+
+.currentMember {
+  & > .message-content {
+    align-items: flex-end;
+    &.text {
+      background-color: $tomato;
+    }
+  }
+}
+
+.message-content {
+  display: inline-block;
+  & > .username {
+    display: block;
+    color: gray;
+    font-size: 0.875em;
+    padding: 0.25em;
+  }
+  & > .text {
+    padding: 0.625em;
+    max-width: 30vw;
+    margin: 0;
+    border-radius: 0.75em;
+    background-color: $deepskyblue;
+    color: white;
+    display: inline-block;
+  }
+}

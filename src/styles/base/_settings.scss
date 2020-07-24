@@ -1,0 +1,28 @@
+//fonts
+///font-family
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+$roboto: 'Roboto', sans-serif;
+
+///font-weight
+$roboto-light: 300;
+$roboto-normal: 400;
+$roboto-medium: 500;
+$roboto-semibold: 600;
+$roboto-bold: 700;
+
+//colours
+$tomato: hsl(349, 100, 60);
+$deepskyblue: hsl(196, 100, 46);
+$darkslategray: hsl(210, 12, 15);
+
+//layout
+///header
+$header-background: $darkslategray;
+
+///message bubbles
+$sender-message-colour: $tomato;
+$recipient-message-colour: $deepskyblue;
+
+///message input
+$send-button-colour: $tomato;
+$input-focus-colour: $deepskyblue;

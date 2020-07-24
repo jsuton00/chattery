@@ -1,0 +1,34 @@
+import React from 'react';
+
+export default function Messages(props) {
+  const { messages, currentMember } = props;
+
+  const renderMessage = (message) => {
+    const { member, text } = message;
+    const messageFromMe = member.id === currentMember.id;
+    return (
+      <div
+        key={Math.random()}
+        className={
+          messageFromMe ? 'messages-message currentMember' : 'messages-message'
+        }
+      >
+        <span
+          className="avatar"
+          style={{ backgroundColor: member.clientData.color }}
+        >
+          <div className="message-contet">
+            <div className="username">{member.clientData.username}</div>
+            <div className="text">{text}</div>
+          </div>
+        </span>
+      </div>
+    );
+  };
+
+  return (
+    <div className="messages-list">
+      {messages && messages.map((m) => renderMessage(m))}
+    </div>
+  );
+}
