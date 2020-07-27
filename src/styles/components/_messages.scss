@@ -1,6 +1,7 @@
 .messages-list {
+  padding: 1.25em 0;
+  max-width: 100%;
   width: 100%;
-  padding: 1.5em 0;
   margin: 0 auto;
   flex-grow: 1;
   overflow-y: visible;
@@ -12,40 +13,40 @@
   &.currentMember {
     flex-direction: row-reverse;
     text-align: right;
-  }
-  & > .avatar {
-    width: 2.19em;
-    height: 2.19em;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 0.625em -0.625em;
-  }
-}
-
-.currentMember {
-  & > .message-content {
-    align-items: flex-end;
-    & .text {
-      background-color: $tomato;
+    & > .message-content {
+      align-items: flex-end;
+      .text {
+        background-color: $tomato !important;
+      }
     }
   }
-}
-
-.message-content {
-  display: inline-block;
-  & > .username {
-    display: block;
-    color: gray;
-    font-size: 0.875em;
-    padding: 0.25em;
-  }
-  & > .text {
-    padding: 0.625em;
-    max-width: 30vw;
-    margin: 0;
-    border-radius: 0.75em;
-    background-color: $deepskyblue;
-    color: white;
+  & > .avatar {
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 50%;
     display: inline-block;
+    padding: 0.25em;
+    margin: 0 0.625em 0.625em;
+  }
+
+  .message-content {
+    display: inline-block;
+
+    & > .username {
+      display: block;
+      color: gray;
+      font-size: 1em;
+      padding: 0.25em;
+    }
+
+    & > .text {
+      padding: 0.625em;
+      max-width: 30vw;
+      margin: 0;
+      border-radius: 0.75em;
+      background-color: $deepskyblue;
+      color: white;
+      display: inline-block;
+    }
   }
 }

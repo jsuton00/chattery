@@ -1,17 +1,25 @@
-.app-header {
-  background-color: $darkslategray;
-  justify-content: center;
-  align-items: center;
-  height: 12.8vh;
-  padding: 0.5em;
-}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
 
-.app-title {
-  justify-content: center;
-  align-items: center;
-  h1 {
-    font-size: 2.4vw;
-    color: #fff;
-    text-align: center;
+  &-header {
+    background-color: $darkslategray;
+    justify-content: center;
+    align-items: center;
+    height: 12.8vh;
+    padding: 0.5em;
+  }
+
+  &-title {
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 2.4vw;
+      color: #fff;
+      text-align: center;
+    }
   }
 }

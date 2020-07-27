@@ -8,7 +8,7 @@ export default function Messages(props) {
     console.log(member);
     const messageFromMe = member.id === currentMember.id;
     return (
-      <li
+      <div
         key={Math.random()}
         className={
           messageFromMe ? 'messages-message currentMember' : 'messages-message'
@@ -23,13 +23,13 @@ export default function Messages(props) {
             <div className="text">{text}</div>
           </div>
         </span>
-      </li>
+      </div>
     );
   };
 
   return (
-    <ul className="messages-list">
+    <div className="messages-list">
       {messages && messages.map((m) => renderMessage(m))}
-    </ul>
+    </div>
   );
 }

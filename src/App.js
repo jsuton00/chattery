@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import MessageInput from './components/MessageInput';
 import Messages from './components/Messages';
 import { randomName, randomColour } from './utils/GenerateUsername';
+require('dotenv').config();
 
-console.log(process.env);
-const api_Key = String(process.env.REACT_APP_API_KEY);
-console.log(api_Key);
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
   state = {
@@ -16,7 +15,7 @@ class App extends Component {
     },
   };
   componentDidMount() {
-    this.drone = new window.Scaledrone('G1aTSlBNFsaGZtug', {
+    this.drone = new window.Scaledrone(API_KEY, {
       data: this.state.member,
     });
     this.drone.on('open', (error) => {
