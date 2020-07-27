@@ -3,6 +3,10 @@ import MessageInput from './components/MessageInput';
 import Messages from './components/Messages';
 import { randomName, randomColour } from './utils/GenerateUsername';
 
+console.log(process.env);
+const api_Key = String(process.env.REACT_APP_API_KEY);
+console.log(api_Key);
+
 class App extends Component {
   state = {
     messages: [],

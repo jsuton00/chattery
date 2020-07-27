@@ -25,7 +25,7 @@
 .currentMember {
   & > .message-content {
     align-items: flex-end;
-    &.text {
+    & .text {
       background-color: $tomato;
     }
   }

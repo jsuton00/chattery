@@ -5,9 +5,10 @@ export default function Messages(props) {
 
   const renderMessage = (message) => {
     const { member, text } = message;
+    console.log(member);
     const messageFromMe = member.id === currentMember.id;
     return (
-      <div
+      <li
         key={Math.random()}
         className={
           messageFromMe ? 'messages-message currentMember' : 'messages-message'
@@ -17,18 +18,18 @@ export default function Messages(props) {
           className="avatar"
           style={{ backgroundColor: member.clientData.color }}
         >
-          <div className="message-contet">
+          <div className="message-content">
             <div className="username">{member.clientData.username}</div>
             <div className="text">{text}</div>
           </div>
         </span>
-      </div>
+      </li>
     );
   };
 
   return (
-    <div className="messages-list">
+    <ul className="messages-list">
       {messages && messages.map((m) => renderMessage(m))}
-    </div>
+    </ul>
   );
 }

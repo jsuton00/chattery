@@ -19,18 +19,19 @@ export default function MessageInput(props) {
       id="message-input"
       name="message-input"
       onSubmit={submitMessage}
-      className="row"
+      className="form row"
     >
       <textarea
         id="enter-message"
         name="enter-message"
         type="text"
-        className="input form-control"
+        className="input-message form-control"
         placeholder="Type a Message and click Enter"
+        rows="1"
         value={text}
         onChange={changeHandler}
       ></textarea>
-      <button id="btnSend" name="btnSend" type="submit">
+      <button id="btnSend" name="btnSend" className="button" type="submit">
         Send
       </button>
     </form>

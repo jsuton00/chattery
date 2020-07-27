@@ -1,1 +1,31 @@
+.form {
+  justify-content: space-around;
+  align-items: baseline;
+  width: 100%;
+  max-width: 100%;
+  padding: 1em;
+  margin: 2.5em auto 0;
+}
 
+.input-message {
+  position: relative;
+  width: 100%;
+  flex-basis: 89%;
+  border-radius: 1.5em;
+  padding: 0.75em 1.25em;
+  overflow: auto;
+  resize: none;
+}
+
+.button {
+  position: relative;
+  background-color: $send-button-colour;
+  border: 0.0625em solid $send-button-colour;
+  border-radius: 0.5em;
+  font-size: 1.2em;
+  font-weight: $roboto-medium;
+  color: #fff;
+  width: 100%;
+  flex-basis: 9%;
+  padding: 0.75em 1.25em;
+}
